@@ -1,0 +1,6 @@
+#! /bin/bash
+/etc/omz.sh
+service ssh start
+service salt-minion start
+update-rc.d ssh enable
+update-rc.d salt-minion enable

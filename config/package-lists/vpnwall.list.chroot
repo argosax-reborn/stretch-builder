@@ -1,0 +1,7 @@
+adduser gnupg user-setup eject locales console-data console-setup console-setup-linux console-common keyboard-configuration iptables iproute net-tools
+file-roller dtrx p7zip-full bzip2 lzma zip
+upower acpi
+dosfstools ntfs-3g mtools e2fsprogs
+live-tools pm-utils gvfs gvfs-fuse gvfs-backends sudo
+tmux zsh proxychains salt-minion ldap-utils nscd
+linux-image-amd64

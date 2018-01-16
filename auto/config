@@ -1,0 +1,19 @@
+#!/bin/sh
+set -e
+lb config noauto \
+ --binary-images "iso-hybrid" \
+ --architectures "amd64" \
+ --bootloader "syslinux" \
+ --bootappend-live "boot=live lang=fr_FR.UTF-8 locales=fr_FR.UTF-8 keyboard-layouts=fr keyboard-model=pc105 timezone=Europe/Paris utc=yes autologin username=user toram" \
+ --binary-images "iso-hybrid" \
+ --distribution "stretch" \
+ --archive-areas "main contrib non-free" \
+ --apt-indices "false" \
+ --apt-http-proxy "http://192.168.137.1:3142/" \
+ --apt-recommends "false" \
+ --includes "none" \
+ --memtest "none" \
+ --win32-loader "false" \
+ --source "false" \
+ --debug \
+    "${@}"
