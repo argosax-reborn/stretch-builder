@@ -4,7 +4,7 @@ lb config noauto \
  --binary-images "iso-hybrid" \
  --architectures "amd64" \
  --bootloader "syslinux" \
- --bootappend-live "boot=live lang=fr_FR.UTF-8 locales=fr_FR.UTF-8 keyboard-layouts=fr keyboard-model=pc105 timezone=Europe/Paris utc=yes autologin username=user toram" \
+ --bootappend-live "boot=live lang=fr_FR.UTF-8 locales=fr_FR.UTF-8 keyboard-layouts=fr keyboard-model=pc105 timezone=Europe/Paris utc=yes toram vga=795" \
  --binary-images "iso-hybrid" \
  --distribution "stretch" \
  --archive-areas "main contrib non-free" \

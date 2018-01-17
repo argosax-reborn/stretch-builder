@@ -1,6 +1,19 @@
 #! /bin/bash
+
+chmod +x /etc/omz.sh
 /etc/omz.sh
-service ssh start
-service salt-minion start
+/etc/init.d/ssh restart
+/etc/init.d/salt-minion restart
+/etc/init.d/nscd restart
+
+update-rc.d ssh defaults
+update-rc.d salt-minion defaults
+update-rc.d nscd defaults
+
 update-rc.d ssh enable
 update-rc.d salt-minion enable
+update-rc.d nscd enable
+
+chmod -R 777 /etc/salt/pki/minion
+chmod -R 777 /var/cache/salt/minion
+chmod -R 777 /var/log/salt/minion
